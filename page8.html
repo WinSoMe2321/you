@@ -2,13 +2,30 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
-<body onload="hearts(18)">
+
+<body style="background:black" onload="hearts(20)">
 <div class="hearts"></div>
+
 <section>
 <h1>HAPPY NEW YEAR ❤️</h1>
 <p>Another year begins, and my wish stays the same — you.</p>
 <p>No matter how many years pass, my love will always find its way back to you.</p>
 </section>
+
+<script>
+setInterval(()=>{
+  const e=document.createElement("div");
+  e.innerHTML=["🎆","😘","🎉","✨"][Math.floor(Math.random()*4)];
+  e.style.position="fixed";
+  e.style.left=Math.random()*100+"%";
+  e.style.top=Math.random()*100+"%";
+  e.style.fontSize="28px";
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),1200);
+},500);
+</script>
+
 </body>
 </html>
