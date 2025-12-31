@@ -4,14 +4,29 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
-<body onload="hearts(2);heartbeat()">
+
+<body style="background:black" onload="hearts(3);heartbeat()">
+
+<!-- BIG HEART -->
+<div style="
+position:fixed;
+width:300px;height:300px;
+background:#b00000;
+transform:rotate(45deg);
+box-shadow:0 0 60px #ff0000;
+animation:pulse 1.4s infinite;
+"></div>
+
 <div class="hearts"></div>
+
 <section>
 <div class="beat">This heart learned how to love because of you.</div>
 <div class="beat">It found peace in places it never knew existed.</div>
 <div class="beat">I choose you — every single day.</div>
 <div class="beat"><b>Forever.</b></div>
+
 <button onclick="location.href='page4.html'">Continue</button>
 </section>
+
 </body>
 </html>
