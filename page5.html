@@ -2,14 +2,45 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
 </head>
-<body>
+
+<body style="background:#020617">
+
 <section>
-<p>Some things aren’t meant for the world.</p>
-<p>They’re meant for just us.</p>
-<input id="pass" type="password" placeholder="Enter password">
-<button onclick="checkP2()">Unlock</button>
+<h2>Under the midnight sky</h2>
+<p>Touch the stars.</p>
+
+<div id="stars"></div>
+
+<button onclick="location.href='page6.html'">My promise</button>
 </section>
+
+<script>
+const messages=[
+"Some nights feel calmer just because you exist.",
+"You turn ordinary moments into memories.",
+"With you, silence never feels empty.",
+"Loving you feels natural.",
+"This New Year, I wish to see your smile from close, create small beautiful moments, and laugh with you."
+];
+
+const stars=document.getElementById("stars");
+for(let i=0;i<5;i++){
+  const s=document.createElement("div");
+  s.style.width="18px";
+  s.style.height="18px";
+  s.style.borderRadius="50%";
+  s.style.background="white";
+  s.style.boxShadow="0 0 20px white";
+  s.style.position="absolute";
+  s.style.left=Math.random()*80+10+"%";
+  s.style.top=Math.random()*50+20+"%";
+  s.style.cursor="pointer";
+  s.onclick=()=>alert(messages[i]);
+  stars.appendChild(s);
+}
+</script>
+
 </body>
 </html>
+
