@@ -3,12 +3,48 @@
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
-<body onload="hearts(18)">
-<div class="hearts"></div>
+
+<body style="background:#050505">
+
 <section>
-<h1>HAPPY NEW YEAR ❤️</h1>
-<p>Another year begins, and my wish stays the same — you.</p>
-<p>No matter how many years pass, my love will always find its way back to you.</p>
+<h2>My promise to you</h2>
+
+<div id="ring" style="
+width:160px;height:160px;
+border:8px solid gold;
+border-radius:50%;
+box-shadow:0 0 30px gold;
+margin:30px;
+animation:spin 8s linear infinite;
+cursor:pointer
+"></div>
+
+<p id="promise"></p>
+
+<button onclick="location.href='page7.html'">One last secret</button>
 </section>
+
+<script>
+const promises=[
+"I promise to choose you, every single day.",
+"I promise to grow with you, not away from you.",
+"I promise to protect what we have.",
+"I promise to love you through actions.",
+"I promise I will never let you down."
+];
+let i=0;
+ring.onclick=()=>{
+  if(i<promises.length)
+    promise.innerHTML=promises[i++];
+};
+</script>
+
+<style>
+@keyframes spin{
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
+}
+</style>
+
 </body>
 </html>
