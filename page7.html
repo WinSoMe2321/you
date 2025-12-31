@@ -4,11 +4,28 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
-<body>
+
+<body style="background:#140018" onload="hearts(6)">
+<div class="hearts"></div>
+
 <section>
 <p>Some things aren’t meant for the world.</p>
-<input id="pass" type="password" placeholder="Enter password">
-<button onclick="checkP2()">Unlock</button>
+<p>They’re meant for just us.</p>
+
+<div style="
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 25px pink;
+background:#1f0028
+">
+<input id="p7" type="password" placeholder="Enter password">
+<button onclick="
+if(p7.value===pass7) location.href='page8.html';
+else alert('Only you ❤️');
+">Unlock</button>
+</div>
+
 </section>
 </body>
 </html>
+
