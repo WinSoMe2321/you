@@ -2,14 +2,45 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
-<body onload="hearts(4)">
+
+<body style="background:linear-gradient(135deg,#3a006f,#ff5fa2)"
+onload="hearts(6)">
 <div class="hearts"></div>
+
 <section>
-<p>I promise to choose you, my wifey.</p>
-<p>I promise to grow with you.</p>
-<p><b>I promise I will never let you down.</b></p>
-<button onclick="location.href='page7.html'">One last secret</button>
+<h2>Love gives choices.</h2>
+<p>But no matter what you choose… my heart stays the same.</p>
+
+<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:30px">
+
+<button onclick="show(1)">Why I Love You</button>
+<button onclick="show(2)">Our Moments</button>
+<button onclick="show(3)">My Promise</button>
+
+</div>
+
+<p id="box" style="margin-top:30px;max-width:600px"></p>
+
+<p style="margin-top:40px;font-style:italic">
+Different paths… same ending.
+</p>
+
+<button onclick="location.href='page5.html'">Under the midnight sky</button>
 </section>
+
+<script>
+function show(n){
+  if(n===1)
+    box.innerHTML="Your honesty, your smile, and your expressive eyes.<br>Your beautiful soul, stubborn nature, and caring heart.<br>I don’t need a reason to love you.";
+  if(n===2)
+    box.innerHTML="Some moments don’t need pictures.<br>They live quietly in the heart.";
+  if(n===3)
+    box.innerHTML="I promise to be gentle with your heart.<br>I promise to stand with you in hard times.<br>I promise to love intentionally, not temporarily.";
+}
+</script>
+
 </body>
 </html>
+
