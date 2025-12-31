@@ -5,13 +5,21 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
-<body onload="hearts(4)">
+
+<body style="background:radial-gradient(circle,#6a00ff,#120020)"
+onload="hearts(4)">
 <div class="hearts"></div>
+
 <section>
 <h1>Happy New Year Mrs. SHIPRA BOORA ❤️</h1>
 <p>This year begins the same way my heart always does — with you.</p>
-<input id="pass" type="password" placeholder="Enter password">
-<button onclick="checkP1()">Enter</button>
+
+<input id="p1" type="password" placeholder="Enter password">
+<button onclick="
+if(p1.value===pass1) location.href='page2.html';
+else alert('Hehe… only you can unlock this 😉');
+">Enter</button>
 </section>
+
 </body>
 </html>
